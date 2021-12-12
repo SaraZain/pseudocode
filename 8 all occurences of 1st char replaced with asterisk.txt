@@ -1,0 +1,27 @@
+        declare str1, str2 : String
+        declare n : Integer
+        declare thisChar, char2 : Char
+
+        str1 <-- ""
+        str2 <-- ""
+        thisChar <-- ''
+        char2 <-- ''
+        n <-- 0
+
+
+        INPUT "enter string to proccess : ",str1
+
+        str1 <-- Lower(str1)
+        thisChar <-- Left(str1, 1)
+        str2 <-- Left(str1, 1)
+        For i <-- 2 To Len(str1)
+
+            char2 <-- Mid(str1, i, 1)
+            If char2 <> thisChar Then
+                str2 <-- str2 + char2
+            Else
+                str2 <-- str2 + "*"
+            End If
+        Next i
+        OUTPUT "the updated string is : " , str2
+        

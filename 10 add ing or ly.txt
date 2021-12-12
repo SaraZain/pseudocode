@@ -1,0 +1,16 @@
+   declare  str1, str2 : String
+
+        str1 = ""
+        str2 = ""
+
+
+        INPUT "enter string to process : ",str1 
+        If Len(str1) >= 3 And Right(str1, 3) = "ing" Then
+            str2 <-- str1 + "ly"
+ 
+        ElseIf Len(str1) >= 3 Then
+            str2 <-- str1 + "ing"
+
+        End If
+        OUTPUT "the updated string is : " + str2
+       

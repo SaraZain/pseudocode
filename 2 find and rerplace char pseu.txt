@@ -1,0 +1,29 @@
+        Declare str1, str2: String
+        Declare char1, char2, char3: Char
+        Declare i: Integer
+
+        str1 <-- ""
+        str2 <-- ""
+        char1 <-- ‘’
+        char2 <-- ‘’
+        char3 <-- ‘’
+        i <-- 0
+
+        INPUT "enter character to truncate : ",char1
+ 
+        INPUT "enter character to replace truncated character with : ",char3
+
+        INPUT "enter string to process : ",str2
+
+        For i <-- 1 To Len(str2)
+            char2 <-- Mid(str2, i, 1)
+            If char2 <> char1 Then
+                str1 <-- str1 & char2
+            Else
+                str1 <-- str1 & char3
+
+
+            End If
+
+        Next i
+        OUTPUT "the updated string is : ",str1

@@ -1,0 +1,42 @@
+        Declare Str1, Str2 : String
+        Declare thisChar : Char
+        Declare i : Integer
+        Declare isPangram : Boolean
+
+
+        isPangram <-- True
+        Str1 <-- "abcdefghijklmnopqrstuvwxyz"
+        Str2 <-- ""
+        thisChar <-- ''
+        i <-- 0
+
+
+
+        INPUT("Input string to check : ",Str2)
+        Str2 <-- LCase(Str2)
+
+        If Len(Str2) < 26 Then isPangram <-- False
+
+        For i <-- 1 To Len(Str1)
+
+            thisChar <-- Mid(Str1, i, 1)
+            If InStr(Str2, thisChar) = 0 Then
+                isPangram <-- False
+            Else : isPangram <-- True
+
+            End If
+
+            If isPangram <-- False Then Exit For
+
+
+        Next i
+        If isPangram <-- False Then
+            OUTPUT "entered string is not a pangram."
+
+        ElseIf isPangram <-- True Then
+            OUTPUT "entered string is a pangram."
+
+        End If
+     
+
+

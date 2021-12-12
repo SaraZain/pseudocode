@@ -1,0 +1,15 @@
+ declare  str1, str2, str3 : String
+ declare n : Integer
+
+        str1 <-- "not bad"
+        str2 <-- ""
+        n <-- 0
+
+       INPUT "enter string to procces : " , str2 
+
+        n <-- InStr(str2, str1)
+        str3 <-- Left(str2, n - 1) + "good" + Right(str2, Len(str2) - n - 6)
+
+        OUTPUT "the updated string is : " + str3
+       
+

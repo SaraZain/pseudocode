@@ -1,0 +1,17 @@
+declare  str1, str2, str11, str22 : String
+
+
+        str1 <-- ""
+        str2 <-- ""
+        str11 <-- ""
+        str22 <-- ""
+
+
+       INPUT"enter first string : ",str1
+
+       INPUT "enter second string : ",str2 
+
+        str11 <-- Left(str2, 2) + Right(str1, Len(str1) - 2)
+        str22 <-- Left(str1, 2) + Right(str2, Len(str2) - 2)
+       OUPUT "the swapped string is : " + str22 + " " + str11
+        

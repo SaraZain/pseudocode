@@ -1,0 +1,30 @@
+        declare str1 : String
+        declare thisChar : Char
+        declare alphacount, numcount, specialcharcount : Integer
+
+        str1 <-- ""
+        thisChar <-- ''
+        alphacount <-- 0
+        numcount <-- 0
+        specialcharcount <-- 0
+
+        INPUT "enter string to check : ",str1
+
+        str1 <-- UPPER(str1)
+        For i <-- 1 To Len(str1)
+            thisChar <-- Mid(str1, i, 1)
+            If thisChar >= "A" And thisChar <= "Z" Then
+                alphacount <-- alphacount + 1
+
+            ElseIf thisChar >= "0" And thisChar <= "9" Then
+                numcount <-- numcount + 1
+
+            Else  specialcharcount <-- specialcharcount + 1
+            End If
+
+        Next i
+
+        OUTPUT "number of alphabets in this string :" , alphacount
+        OUTPUT "number of digits in this string : " , numcount
+        OUTPUT "number of other characters in this string :" , specialcharcount
+     

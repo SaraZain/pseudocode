@@ -1,0 +1,34 @@
+        Declare str1 : String
+        Declare thisChar, char2, char3 : Char
+        Declare counter, highestcount : Integer
+
+        str1 <-- ""
+        thisChar <-- ''
+        char2 <-- ''
+        char3 <-- ''
+        highestcount <-- 0
+
+
+        INPUT "enter string to process :", str1
+
+        str1 <-- LOWER(str1)
+        For i <-- 1 To Len(str1)
+            thisChar <-- Mid(str1, i, 1)
+            counter <-- 1
+            For j <-- 1 To Len(str1)
+                char2 <-- Mid(str1, j, 1)
+                If char2 = thisChar Then
+                    counter <-- counter + 1
+
+                End If
+
+            Next j
+            If counter > highestcount Then
+                highestcount <-- counter
+                char3 <-- thisChar
+            End If
+
+        Next i
+
+        OUTPUT "the maximum occurred character in the string is : " , char3
+       

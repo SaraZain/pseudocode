@@ -1,0 +1,37 @@
+        declare str1 : String
+        declare thisChar : Char
+        declare i, acount, ecount, icount, ocount, ucount : Integer
+
+        str1 <-- ""
+        thisChar <-- ''
+        i <-- 0
+        acount <-- 0
+        ecount <-- 0
+        icount <-- 0
+        ocount <-- 0
+        ucount <-- 0
+
+        INPUT "enter string to process : ",str1
+
+        str1 <-- Lower(str1)
+        For i <-- 1 To Len(str1)
+            thisChar <-- Mid(str1, i, 1)
+            If thisChar = "a" Then
+                acount <-- acount + 1
+            ElseIf thisChar = "e" Then
+                ecount <-- ecount + 1
+            ElseIf thisChar = "i" Then
+                icount <-- icount + 1
+            ElseIf thisChar = "o" Then
+                ocount <-- ocount + 1
+            ElseIf thisChar = "u" Then
+                ucount <-- ucount + 1
+            End If
+        Next i
+
+        OUTPUT "the number of a's in the string are " , acount 
+        OUTPUT "the number of e's in the string are " , ecount 
+        OUTPUT "the number of i's in the string are " , icount 
+        OUTPUT "the number of o's in the string are " , ocount 
+        OUTPUT "the number of u's in the string are " , ucount
+      

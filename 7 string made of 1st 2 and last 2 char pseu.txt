@@ -1,0 +1,16 @@
+ Declare str1, str2, str3 : String
+
+        str1 =""
+        str2 = ""
+        str3 = ""
+
+        INPUT "enter string to process : " ,str1
+
+        If Len(str1) < 2 Then
+            OUTPUT (str1)
+        ElseIf Len(str1) > 2 Then
+            str2 <-- Left(str1, 2)
+            str3 <-- Right(str1, 2)
+            OUTPUT (str2 & str3)
+        End If
+ 

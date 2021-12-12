@@ -1,0 +1,11 @@
+     Declare n : Integer
+
+        INPUT "enter number of donuts : ", n
+
+        If n >= 10 Then
+            OUTPUT "Number of donuts : " , "many"
+        Else 
+            OUTPUT "Number of donuts : " , n
+
+        End If
+       
